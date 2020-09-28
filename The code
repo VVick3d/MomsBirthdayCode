@@ -1,0 +1,242 @@
+import time
+import random
+games = ["mad libs", "dice roller", "8 ball"]
+max_ascii = r'''
+ (             )
+                       )      (*)           (*)      (
+              *       (*)      |             |      (*)
+                       |      |~|           |~|      |          *
+                      |~|     | |           | |     |~|
+                      | |     | |           | |     | |
+                     ,| |a@@@@| |@@@@@@@@@@@| |@@@@a| |.
+                .,a@@@| |@@@@@| |@@@@@@@@@@@| |@@@@@| |@@@@a,.
+              ,a@@@@@@| |@@@@@@@@@@@@.@@@@@@@@@@@@@@| |@@@@@@@a,
+             a@@@@@@@@@@@@@@@@@@@@@' . `@@@@@@@@@@@@@@@@@@@@@@@@a
+             ;`@@@@@@@@@@@@@@@@@@'   .   `@@@@@@@@@@@@@@@@@@@@@';
+             ;@@@`@@@@@@@@@@@@@'     .     `@@@@@@@@@@@@@@@@'@@@;
+             ;@@@;,.aaaaaaaaaa       .       aaaaa,,aaaaaaa,;@@@;
+             ;;@;;;;@@@@@@@@;@      @.@      ;@@@;;;@@@@@@;;;;@@;
+             ;;;;;;;@@@@;@@;;@    @@ . @@    ;;@;;;;@@;@@@;;;;;;;
+             ;;;;;;;;@@;;;;;;;  @@   .   @@  ;;;;;;;;;;;@@;;;;@;;
+             ;;;;;;;;;;;;;;;;;@@     .     @@;;;;;;;;;;;;;;;;@@@;
+         ,%%%;;;;;;;;@;;;;;;;;       .       ;;;;;;;;;;;;;;;;@@;;%%%,
+      .%%%%%%;;;;;;;@@;;;;;;;;     ,%%%,     ;;;;;;;;;;;;;;;;;;;;%%%%%%,
+     .%%%%%%%;;;;;;;@@;;;;;;;;   ,%%%%%%%,   ;;;;;;;;;;;;;;;;;;;;%%%%%%%,
+     %%%%%%%%`;;;;;;;;;;;;;;;;  %%%%%%%%%%%  ;;;;;;;;;;;;;;;;;;;'%%%%%%%%
+     %%%%%%%%%%%%`;;;;;;;;;;;;,%%%%%%%%%%%%%,;;;;;;;;;;;;;;;'%%%%%%%%%%%%
+     `%%%%%%%%%%%%%%%%%,,,,,,,%%%%%%%%%%%%%%%,,,,,,,%%%%%%%%%%%%%%%%%%%%'
+       `%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+           `%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+                  """"""""""""""`,,,,,,,,,'"""""""""""""""""
+                                 `%%%%%%%'
+                                  `%%%%%'
+                                    %%%     Erin Cherney
+                                   %%%%%
+                                .,%%%%%%%,.
+                           ,%%%%%%%%%%%%%%%%%%%
+
+'''
+ellie_ascii = r"""
+  (        (
+             ( )      ( )          (
+      (       Y        Y          ( )
+     ( )     |"|      |"|          Y
+      Y      | |      | |         |"|
+     |"|     | |.-----| |---.___  | |
+     | |  .--| |,~~~~~| |~~~,,,,'-| |
+     | |-,,~~'-'___   '-'       ~~| |._
+    .| |~       // ___            '-',,'.
+   /,'-'     <_// // _  __             ~,\
+  / ;     ,-,     \\_> <<_' ____________;_)
+  | ;    {(_)} _,      ._>>`'-._          |
+  | ;     '-'\_\/>              '-._      |
+  |\ ~,,,      _\__            ,,,,,'-.   |
+  | '-._ ~~,,,            ,,,~~ __.-'~ |  |
+  |     '-.__ ~~~~~~~~~~~~ __.-'       |__|
+  |\         `'----------'`           _|
+  | '=._                         __.=' |
+  :     '=.__               __.='      |
+   \         `'==========='`          .'
+     '-._                         __.-'
+        '-.__               __.-'
+             `'-----------'`
+
+"""
+eight_ball_ascii = r"""
+  .-'''-.
+/    _    \
+|   (8)   |
+\    ^    /
+ '-. . .-'
+"""
+max_madlib = """
+It was a noun day on September 25. Mom verb up as verb over to the noun. She got excited because she was going to be eating green eggs and  noun.
+When she was done eating her noun, she wanted to a verb party as we were all having adjective. She thought what an adjective this party is.
+When we got done, it was time to verb her number birthday! Happy number Birthday Mom we <3 you!!
+"""
+True_ = True
+while True_:
+    x = input("""Welcome to the 3 in 1 game. Please type in a number for your selection: 
+    1) Mad Libs
+    2) 8 Ball 
+    3) Dice Roller 
+    Enter your perfered game: """)
+    while x == ("1"):
+        choice = input("Welcome to the mad libs! Choose 1 for Max's madlib. Choose 2 for Ellie's madlib: ")
+        if choice == "2":
+            ellie_number_one = input("Enter a number: ")
+            ellie_adjective_one = input("Enter an adjective: ")
+            ellie_adjective_two = input("Enter an adjective: ")
+            ellie_noun_one = input("Enter a noun: ")
+            ellie_adjective_three = input("Enter an adjective: ")
+            ellie_past_tense_verb_one = input("Enter a past tense verb: ")
+            ellie_plural_noun_one = input("Enter a plural noun: ")
+            ellie_noun_two = input("Enter a noun: ")
+            ellie_adjective_four = input("Enter an adjective: ")
+            ellie_number_two = input("Enter a number: ")
+            ellie_adjective_five = input("Enter an adjective: ")
+            ellie_noun_three = input("Enter a noun: ")
+            ellie_noun_four = input("Enter a noun: ")
+            ellie_past_tense_verb_two = input("Enter a past tense verb: ")
+            ellie_room_in_house_one = input("Enter a room in our house: ")
+            ellie_noun_five = input("Enter a noun: ")
+            ellie_adjective_six = input("Enter an adjective: ")
+            ellie_noun_six = input("Enter a noun: ")
+            ellie_noun_seven = input("Enter a noun: ")
+            ellie_plural_noun_two = input("Enter a plural noun: ")
+            ellie_noun_eight = input("Enter a noun: ")
+            ellie_adjective_seven = input("Enter an adjective: ")
+            ellie_noun_nine = input("Enter a noun: ")
+            ellie_adjective_eight = input("Enter an adjective: ")
+            ellie_noun_ten = input("Enter a noun: ")
+            print(ellie_ascii)
+            time.sleep(3)
+            print("""
+            I remember when I turned """ + ellie_number_one +""" years old, it was the best day of my life! My """+  ellie_adjective_one + """ family is so """+ ellie_adjective_two +""", they even got me a Dairy Queen """ + ellie_noun_one + """!! 
+            But let me start from the beginning! First, I woke up to the smell of an """ + ellie_adjective_three + """ breakfast. I """+ ellie_past_tense_verb_one +""" to the kitchen and saw a feast!
+            I stuffed all of the """ + ellie_plural_noun_one + """ in my mouth without even knowing if it was mine. After, I got to work. I started with a """+ellie_noun_two+""" call, it was pretty """+ellie_adjective_four+""" to say the least. 
+            Then I recorded videos of me reading for my """+ellie_number_two+""" students. It was so """+ellie_adjective_five+""", I started to drift off to sleep! Next thing I know, it is dinner time.
+            I have not even picked what """+ellie_noun_three+""" I wanted to eat! I even missed all of my """+ellie_noun_four+""" calls with my students! I """+ellie_past_tense_verb_two+""" out of my room and saw nobody.
+            I thought everyone had forgotten about my birthday!! I started to walk towards the """+ellie_room_in_house_one+""", and got a """+ellie_noun_five+""".
+            Just then, I heard the door open and my """+ellie_adjective_six+""" family walked in. They all snuck past me and took a """+ellie_noun_six+""". I was very confused. What are they up too?
+            When they got out of the """+ellie_noun_seven+""", they all ran to me with a cup of """+ellie_plural_noun_two+""". Then they started to sing """+ellie_noun_eight+""". It was so """+ellie_adjective_seven+""".
+            Turns out, my family saw I was sleeping, and cancelled the """+ellie_noun_nine+""" calls for me. They also put a sleeping pill in the """+ellie_adjective_eight+""" breakfast, which is kinda weird but I trust them.
+            My cup of """+ellie_noun_ten+""" was so good, I love my family! We love you mom!!! <3 """)
+            time.sleep(5)
+            print()
+            print()
+            print()
+            mad_lib_cont = input("Would you like to continue y or n? ")
+            if mad_lib_cont == "y":
+                x = "1"
+            else:
+                x = ""
+
+
+        if choice == "1":
+            noun_max_one = input("Insert an adjective: ")
+            verb_max_one = input("Insert a verb: ")
+            verb_max_two = input("Insert a past tense verb: ")
+            noun_max_two = input("Insert a noun: ")
+            noun_max_three = input("Insert a food: ")
+            noun_max_four = input("Insert a food: ")
+            verb_max_three = input("Insert a adjective: ")
+            ad_max_one = input("Insert an noun: ")
+            ad_max_two = input("Insert a adjective: ")
+            verb_max_four = input("Insert a verb: ")
+            num_max_one = input("Insert a number: ")
+            num_max_two = input("Insert a number: ")
+            print(max_ascii)
+            time.sleep(3)
+            print("""It was a """ + noun_max_one + """ day on September 25. Mom """+ verb_max_one + """ up as she """+ verb_max_two +""" over to the """ + noun_max_two +""". She got excited because she was going to be eating green eggs and """ + noun_max_three +""".
+When she was done eating her """ + noun_max_four +  """, she went to a """ + verb_max_three +""" party as we were all having """ + ad_max_one+""". She thought what an """+ ad_max_two +""" this party is.
+When we got done, it was time to """ + verb_max_four + """ her """ + num_max_one + """ birthday! Happy """ + num_max_two + """ Birthday Mom we <3 you!!""")
+            time.sleep(5)
+            print()
+            print()
+            print()
+            mad_lib_cont = input("Would you like to continue y or n? ")
+            if mad_lib_cont == "y":
+                x = "1"
+            else:
+                x = ""
+
+
+
+
+
+
+
+
+
+    if x == ("exit"):
+        print("Have a nice day!")
+        time.sleep(1)
+        True_ = False
+
+    while x == ("2"):
+        print(eight_ball_ascii)
+        print()
+        print()
+        print("Welcome to the all knowing 8 ball")
+        input("Give me your questions and I will give you an answer: ")
+        eight_ball_resp = ["As I see it, yes", " Ask again later", " Better not tell you now", " Cannot predict now", "Concentrate and ask again", "Don’t count on it", "It is certain", " It is decidedly so.", "Most likely", "My reply is no", "My sources say no", "Outlook not so good", "Outlook good", "Reply hazy, try again", "Signs point to yes", "Very doubtful", "Without a doubt", "Yes", "Yes – definitely", "You may rely on it"]
+        rc_eight = random.choice(eight_ball_resp)
+        print(rc_eight)
+        time.sleep(2)
+        print()
+        print()
+        print()
+        time.sleep(1)
+        eight_ball_cont = input("Would you like to continue y or n? ")
+        if eight_ball_cont == "y":
+            x = "2"
+        else:
+            x = ""
+
+
+
+
+
+
+    while x == ("3"):
+        dice = [1,2,3,4,5,6]
+        rc = str(random.choice(dice))
+        dice_input = input("Enter a number between 1 and 6: ")
+        if rc == dice_input:
+            time.sleep(.7)
+            print(".")
+            time.sleep(.7)
+            print(".")
+            time.sleep(.7)
+            print(".")
+            time.sleep(.7)
+            print("This was the computers number -> " + rc)
+            print("This was your number -> " + dice_input)
+            print("Congratulations! You got the same number as the computer! You win :D !")
+            print()
+            print()
+            print()
+            time.sleep(1)
+            dice_roller_cont = input("Would you like to continue y or n? ")
+            if dice_roller_cont == "y":
+                x = "3"
+            else:
+                x = ""
+        else:
+            time.sleep(.7)
+            print(".")
+            time.sleep(.7)
+            print(".")
+            time.sleep(.7)
+            print(".")
+            time.sleep(.7)
+            print("This was the computers number -> " + rc)
+            print("This was your number -> " + dice_input)
+            print("Sorry, You lose!")
+            time.sleep(1)
+            dice_roller_cont = input("Would you like to continue y or n? ")
+            if dice_roller_cont == "y":
+                x = "3"
+            else:
+                x = ""
